@@ -5,6 +5,7 @@ pipeline {
     }
     environment { 
         USERNAME = 'srvani'
+    }
 
     stages {
         stage('Build') {
