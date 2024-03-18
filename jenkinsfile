@@ -33,6 +33,14 @@ pipeline {
             }
         }
     }
+          stage('Example') {
+            environment { 
+                AUTH = credentials('ssh-auth1') 
+            }
+            steps {
+                sh 'printenv'
+            }
+        }
      post { 
         always { 
             echo 'I will always run whether the job is success or not'
